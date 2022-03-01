@@ -41,7 +41,7 @@ namespace EasyTextEditor
 
         private void tbtn_Bold_Click(object sender, RoutedEventArgs e)
         {
-            //(textBox.FontWeight == FontWeights.Normal) ? textBox.FontWeight = FontWeights.Bold : textBox.FontWeight = FontWeights.Normal;
+            //textBox.FontWeight = textBox.FontWeight == FontWeights.Normal ? FontWeights.Bold : FontWeights.Normal;
             if (textBox.FontWeight == FontWeights.Normal)
                 textBox.FontWeight = FontWeights.Bold;
             else
