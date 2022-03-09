@@ -94,7 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Data\Exit.png" />
+    <Resource Include="Data\Open.png" />
+    <Resource Include="Data\Save.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Data\Boldtext.png" />
     <Resource Include="Data\Italictext.png" />
