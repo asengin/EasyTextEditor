@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:EasyTextEditor"
         mc:Ignorable="d"
         Title="EasyTextEditor" Height="450" Width="800" Icon="Data/Pencil.png">
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="OpenExecuted"/>
+        <CommandBinding Command="Save" Executed="SaveExecuted"/>
+        <CommandBinding Command="Close" Executed="CloseExecuted"/>
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -15,18 +20,18 @@
 
         <Menu>
             <MenuItem Header="_Файл">
-                <MenuItem Header="_Открыть" Click="MenuItem_Click">
+                <MenuItem Command="Open">
                     <MenuItem.Icon>
                         <Image Source="Data/Open.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_Сохранить" Click="MenuItem_Click_1">
+                <MenuItem Command="Save">
                     <MenuItem.Icon>
                         <Image Source="Data/Save.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator/>
-                <MenuItem Header="_Закрыть" Click="MenuItem_Click_2">
+                <MenuItem Command="Close">
                     <MenuItem.Icon>
                         <Image Source="Data/Exit.png"/>
                     </MenuItem.Icon>
@@ -66,7 +71,7 @@
                 <Image Source="Data/RedBlackText.png"/>
                 <StackPanel VerticalAlignment="Center">
                     <RadioButton x:Name="rb_Black" Content="Черный" IsChecked="True" Checked="rb_Black_Checked" />
-                    <RadioButton x:Name="rb_Red" Content="Красный" Checked="rb_Red_Checked"/>
+                    <RadioButton x:Name="rb_Red" Content="Красный" Checked="rb_Red_Checked" Foreground="Red"/>
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>

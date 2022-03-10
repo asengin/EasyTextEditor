@@ -78,7 +78,7 @@ namespace EasyTextEditor
                 textBox.Foreground = Brushes.Red;
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void OpenExecuted(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
@@ -86,7 +86,7 @@ namespace EasyTextEditor
                 textBox.Text = File.ReadAllText(openFile.FileName);
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void SaveExecuted(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
@@ -94,7 +94,7 @@ namespace EasyTextEditor
                 File.WriteAllText(saveFile.FileName, textBox.Text);
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void CloseExecuted(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
