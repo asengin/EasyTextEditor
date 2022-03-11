@@ -41,7 +41,7 @@ namespace EasyTextEditor
                 textBox.FontSize = fontSize;
         }
 
-        private void tbtn_Bold_Click(object sender, RoutedEventArgs e)
+        private void ToggleToBold(object sender, RoutedEventArgs e)
         {
             //textBox.FontWeight = textBox.FontWeight == FontWeights.Normal ? FontWeights.Bold : FontWeights.Normal;
             if (textBox.FontWeight == FontWeights.Normal)
@@ -50,7 +50,7 @@ namespace EasyTextEditor
                 textBox.FontWeight = FontWeights.Normal;
         }
 
-        private void tbtn_Italic_Click(object sender, RoutedEventArgs e)
+        private void ToggleToItalic(object sender, RoutedEventArgs e)
         {
             if (textBox.FontStyle == FontStyles.Normal)
                 textBox.FontStyle = FontStyles.Italic;
@@ -58,7 +58,7 @@ namespace EasyTextEditor
                 textBox.FontStyle = FontStyles.Normal;
         }
 
-        private void tbtn_Underline_Click(object sender, RoutedEventArgs e)
+        private void ToggleToUnderline(object sender, RoutedEventArgs e)
         {
             if (textBox.TextDecorations.Count == 0)
                 textBox.TextDecorations.Add(TextDecorations.Underline);
@@ -66,13 +66,13 @@ namespace EasyTextEditor
                 textBox.TextDecorations.RemoveAt(0);
         }
 
-        private void rb_Black_Checked(object sender, RoutedEventArgs e)
+        private void ToggleToBlack(object sender, RoutedEventArgs e)
         {
             if (textBox != null)
                 textBox.Foreground = Brushes.Black;
         }
 
-        private void rb_Red_Checked(object sender, RoutedEventArgs e)
+        private void ToggleToRed(object sender, RoutedEventArgs e)
         {
             if (textBox != null)
                 textBox.Foreground = Brushes.Red;
@@ -98,5 +98,6 @@ namespace EasyTextEditor
         {
             Application.Current.Shutdown();
         }
+
     }
 }

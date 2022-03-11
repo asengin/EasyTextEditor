@@ -10,6 +10,12 @@
         <CommandBinding Command="Open" Executed="OpenExecuted"/>
         <CommandBinding Command="Save" Executed="SaveExecuted"/>
         <CommandBinding Command="Close" Executed="CloseExecuted"/>
+        <CommandBinding Command="local:CommandsLib.TextBold" Executed="ToggleToBold"/>
+        <CommandBinding Command="ToggleItalic" Executed="ToggleToItalic"/>
+        <CommandBinding Command="ToggleUnderline" Executed="ToggleToUnderline"/>
+        <CommandBinding Command="local:CommandsLib.ToggleRed" Executed="ToggleToRed"/>
+        <CommandBinding Command="local:CommandsLib.ToggleBlack" Executed="ToggleToBlack"/>
+
     </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
@@ -54,15 +60,15 @@
                 </ComboBox>
             </ToolBar>
             <ToolBar>
-                <ToggleButton x:Name="tbtn_Bold" Click="tbtn_Bold_Click" >
+                <ToggleButton x:Name="tbtn_Bold" Command="local:CommandsLib.TextBold" >
                     <Image Source="Data/Boldtext.png"/>
                 </ToggleButton>
                 <Separator/>
-                <ToggleButton x:Name="tbtn_Italic" Click="tbtn_Italic_Click">
+                <ToggleButton x:Name="tbtn_Italic" Command="ToggleItalic">
                     <Image Source="Data/Italictext.png"/>
                 </ToggleButton>
                 <Separator/>
-                <ToggleButton x:Name="tbtn_Underline" Click="tbtn_Underline_Click">
+                <ToggleButton x:Name="tbtn_Underline" Command="ToggleUnderline">
                     <Image Source="Data/Underline.png"/>
                 </ToggleButton>
                 <Separator/>
@@ -70,8 +76,8 @@
             <ToolBar Margin="5" Padding="5">
                 <Image Source="Data/RedBlackText.png"/>
                 <StackPanel VerticalAlignment="Center">
-                    <RadioButton x:Name="rb_Black" Content="Черный" IsChecked="True" Checked="rb_Black_Checked" />
-                    <RadioButton x:Name="rb_Red" Content="Красный" Checked="rb_Red_Checked" Foreground="Red"/>
+                    <RadioButton x:Name="rb_Black" Content="Черный" IsChecked="True" Command="local:CommandsLib.ToggleBlack" />
+                    <RadioButton x:Name="rb_Red" Content="Красный" Command="local:CommandsLib.ToggleRed" Foreground="Red"/>
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>
