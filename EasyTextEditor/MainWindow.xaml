@@ -48,16 +48,22 @@
 
         <ToolBarTray Grid.Row="1" >
             <ToolBar Margin="5" Padding="5">
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="150" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times New Roman"/>
-                    <TextBlock Text="Verdana"/>
-                </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="1" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
-                    <TextBlock Text="20"/>
-                </ComboBox>
+                <ComboBox x:Name="cb_Fonts" 
+                          Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="0" 
+                          Width="150" 
+                          SelectionChanged="ComboBox_SelectionChanged"
+                          ItemsSource="{StaticResource fontsName}"/>
+
+                <ComboBox x:Name="cb_FontsSize" 
+                          Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="3" 
+                          Width="50" 
+                          SelectionChanged="ComboBox_SelectionChanged_1"
+                          ItemsSource="{StaticResource fontsSizes}"/>
+
             </ToolBar>
             <ToolBar>
                 <ToggleButton x:Name="tbtn_Bold" Command="local:CommandsLib.TextBold" >
@@ -82,8 +88,16 @@
             </ToolBar>
         </ToolBarTray>
 
-        <TextBox x:Name="textBox" Grid.Row="2" Margin="5" Padding="5" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" FontSize="16" FontFamily="Arial">
-
+        <TextBox x:Name="textBox" 
+                 Grid.Row="2" 
+                 Margin="5" 
+                 Padding="5" 
+                 TextWrapping="Wrap" 
+                 VerticalScrollBarVisibility="Auto" 
+                 AcceptsReturn="True" 
+                 AcceptsTab="True" 
+                 FontSize="16" 
+                 FontFamily="Arial">
         </TextBox>
     </Grid>
 </Window>
