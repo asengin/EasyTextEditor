@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush x:Key="colorBackground" Color="#FF252526"/>
+    <SolidColorBrush x:Key="colorFont" Color="GreenYellow"/>
+
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource colorFont}"/>
+    </Style>
+    <Style TargetType="ToolBarTray">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+    </Style>
+    <Style TargetType="ToolBar">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+        <!--<Setter Property="Foreground" Value="{StaticResource colorFont}"/>-->
+    </Style>
+    <Style TargetType="Menu">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource colorFont}"/>
+    </Style>
+    <Style TargetType="MenuItem">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource colorFont}"/>
+    </Style>
+    <Style TargetType="ComboBox" x:Key="ComboBoxStyle">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource colorFont}"/>
+    </Style>
+    <Style TargetType="ComboBoxItem">
+        <Setter Property="Background" Value="{StaticResource colorBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource colorFont}"/>
+    </Style>
+</ResourceDictionary>

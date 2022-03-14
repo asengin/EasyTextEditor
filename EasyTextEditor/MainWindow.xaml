@@ -54,7 +54,8 @@
                           SelectedIndex="0" 
                           Width="150" 
                           SelectionChanged="ComboBox_SelectionChanged"
-                          ItemsSource="{StaticResource fontsName}"/>
+                          ItemsSource="{StaticResource fontsName}"
+                          Style="{DynamicResource ComboBoxStyle}"/>
 
                 <ComboBox x:Name="cb_FontsSize" 
                           Margin="5" 
@@ -62,7 +63,8 @@
                           SelectedIndex="3" 
                           Width="50" 
                           SelectionChanged="ComboBox_SelectionChanged_1"
-                          ItemsSource="{StaticResource fontsSizes}"/>
+                          ItemsSource="{StaticResource fontsSizes}"
+                          Style="{DynamicResource ComboBoxStyle}"/>
 
             </ToolBar>
             <ToolBar>
@@ -85,6 +87,18 @@
                     <RadioButton x:Name="rb_Black" Content="Черный" IsChecked="True" Command="local:CommandsLib.ToggleBlack" />
                     <RadioButton x:Name="rb_Red" Content="Красный" Command="local:CommandsLib.ToggleRed" Foreground="Red"/>
                 </StackPanel>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <ComboBox x:Name="theme" 
+                          Margin="5" 
+                          Padding="5" 
+                          Width="100" 
+                          SelectedIndex="0" 
+                          SelectionChanged="theme_SelectionChanged"
+                          Style="{DynamicResource ComboBoxStyle}">
+                    <ComboBoxItem>Светлая тема</ComboBoxItem>
+                    <ComboBoxItem>Темная тема</ComboBoxItem>
+                </ComboBox>
             </ToolBar>
         </ToolBarTray>
 

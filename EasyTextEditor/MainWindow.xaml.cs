@@ -100,5 +100,12 @@ namespace EasyTextEditor
             Application.Current.Shutdown();
         }
 
+        private void theme_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Uri themes = new Uri(theme.SelectedIndex == 0 ? "ThemesLight.xaml" : "ThemesDark.xaml", UriKind.Relative);
+            ResourceDictionary themeDict = Application.LoadComponent(themes) as ResourceDictionary;
+            Application.Current.Resources.MergedDictionaries.Add(themeDict);
+        }
     }
 }

@@ -7,6 +7,8 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ComboBoxResources.xaml"/>
+                <ResourceDictionary Source="ThemesDark.xaml"/>
+                <ResourceDictionary Source="ThemesLight.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
