@@ -52,8 +52,7 @@
                           Margin="5" 
                           Padding="5" 
                           SelectedIndex="0" 
-                          Width="150" 
-                          SelectionChanged="ComboBox_SelectionChanged"
+                          Width="150"
                           ItemsSource="{StaticResource fontsName}"
                           Style="{DynamicResource ComboBoxStyle}"/>
 
@@ -61,14 +60,13 @@
                           Margin="5" 
                           Padding="5" 
                           SelectedIndex="3" 
-                          Width="50" 
-                          SelectionChanged="ComboBox_SelectionChanged_1"
+                          Width="50"
                           ItemsSource="{StaticResource fontsSizes}"
                           Style="{DynamicResource ComboBoxStyle}"/>
 
             </ToolBar>
             <ToolBar>
-                <ToggleButton x:Name="tbtn_Bold" Command="local:CommandsLib.TextBold" >
+                <ToggleButton x:Name="tbtn_Bold" Command="local:CommandsLib.TextBold">
                     <Image Source="Data/Boldtext.png"/>
                 </ToggleButton>
                 <Separator/>
@@ -110,8 +108,8 @@
                  VerticalScrollBarVisibility="Auto" 
                  AcceptsReturn="True" 
                  AcceptsTab="True" 
-                 FontSize="16" 
-                 FontFamily="Arial">
+                 FontSize="{Binding ElementName=cb_FontsSize, Path=Text}" 
+                 FontFamily="{Binding ElementName=cb_Fonts, Path=Text}">
         </TextBox>
     </Grid>
 </Window>
